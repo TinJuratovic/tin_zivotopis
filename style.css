@@ -1,0 +1,35 @@
+.okvir{
+    border: 1px solid black;
+}
+
+.container{
+    width: 50%;
+    margin: auto;
+}
+.logo{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.logo img {
+    width: 250px;
+   
+}
+.basic h1{
+    font-size: 25px;
+}
+
+.basic_info{
+    display: flex;
+    flex-direction: column;
+}
+.basic_info .info{
+    padding:5px;
+}
+.info .title{
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.advanced_info .info {
+    font-size: 36px;
+}
