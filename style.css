@@ -3,8 +3,18 @@
 }
 
 .container{
-	width: 50%;
-	margin: auto;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+.content{
+	width: 70%;
+	@media  screen and (max-width: 1200px) {
+		width: 90%;
+	} 
+	@media  screen and (max-width: 600px) {
+		width: 100%;
+	} 
 }
 .logo{
 	display: flex;
@@ -18,8 +28,10 @@
 .infos{
 	display: flex;
 	flex-direction: column;
-	align-items: left;
 	gap: 20px;
+}
+.basic{
+	margin-left: 20px;
 }
 .basic h1{
 	font-size: 25px;
@@ -45,12 +57,8 @@
 	margin-left: 35px;
 }
 
-.space{
-	margin: 0;
-}
-.wrapper{
-	position: relative;
-}
+
+
 .container_1{
 	position: absolute;
 	left: 50%;
@@ -59,26 +67,32 @@
 	background: yellow;
 }
 
-.bold span{
+.bold{
 	font-weight: bold; 
 }
 
 .split{
-            display: flex;
-            flex-direction: row;
-	    margin: 0;
-	    padding: 0;
-	    justify-content: flex-start;
-        }
+	display: flex;
+    flex-direction: row;
+	gap: 20px;
+    @media  screen and (max-width: 600px) {
+		display: flex;
+		flex-direction: column;
+		gap:20px;
+	}    
+	}
+
 	
 .left{
-            width: 300px; 
-        }
-        
-.right{
-	    width: 900px;
-		
-	}
+	flex-grow:1;
+}
+.work-experience-info{
+	flex-grow:4;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
 .work-section{
 	padding: 1rem;
 }
@@ -86,13 +100,37 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	justify-items: end;
 	margin-bottom: 15px;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.work-experience{
+	flex-basis: 250px;
+
+}
+.work-experience-date{
+	flex-basis: 250px;	
+	flex-grow:0;
+	flex-shrink: 0;
+	text-align: end;
+	text-wrap: wrap;
+	@media  screen and (max-width: 600px) {
+		flex:0;
+		text-align: start;
+	}
+
 }
 .work-experience h1{
     font-weight: bold;
     text-transform: uppercase;
     font-size: 24px;
-    
+	text-align: end;
+}
+.work-experience-section{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 }
 
 .line {
@@ -101,31 +139,32 @@
     border-bottom: 1px solid blue;
 }
 
-
-
-.size{
-	width: fit-content;
-	gap: 15px;
-}
-
 .line-height{
 	font-size: 18px;
     	line-height: 18px;
     	height: 18px;
 }
 
-.gap{
-	margin-bottom: 15px;
+.section-language{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 }
 
-.up{
-	margin-top 15px;
+.section-language-info{
+	display: flex;
+	flex-direction: column;
+	gap:5px;
 }
-
-.align{
-	overflow-wrap: break-word;	
+.section-language-list {
+	display: flex;
+	flex-direction: column;
+	gap:5px;
 }
-.wrap{
-	word-wrap: break-word; 
+.section-language-specs{
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+	color:darkgray;
+	padding: 5px 5px 5px 0px;
 }
-
